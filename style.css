@@ -569,6 +569,34 @@ h3 {
     gap: 20px !important;
 }
 
+.hero-image {
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+    margin: 20px 0 !important;
+    order: -1 !important; /* Ставим фото над текстом, так удобнее на мобилках */
+}
+
+.hero-image img {
+    max-width: 200px !important; /* Ограничиваем ширину, чтобы не было гигантским */
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 20px; /* Если нужно сохранить скругление */
+}
+
+.hero .btn, 
+.price-card .btn,
+.footer .btn {
+    white-space: nowrap !important; /* Запрещает перенос текста на новую строку */
+    width: auto !important;         /* Кнопка подстраивается под текст */
+    min-width: 280px !important;    /* Но не меньше этого значения для удобства нажатия */
+    padding: 14px 20px !important;  /* Чуть меньше падинги по бокам */
+    font-size: 15px !important;     /* Слегка уменьшаем шрифт, чтобы влезло */
+    display: inline-flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
 /* Список ссылок (теги) в футере */
 .footer-nav {
     display: flex !important;
@@ -811,4 +839,12 @@ h3 {
         align-items: center; 
     }
     .dev-img { width: 120px; }
+}
+
+@media (max-width: 380px) {
+    .btn {
+        font-size: 14px !important;
+        letter-spacing: -0.5px !important; /* Немного сужаем буквы */
+        padding: 12px 10px !important;
+    }
 }
