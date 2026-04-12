@@ -434,15 +434,17 @@ h3 {
     transform: translateY(-5px);
 }
 
+/* Крупная цифра на фоне */
 .rule-num {
-    font-size: 48px;
-    font-weight: 600;
+    font-size: 56px;
+    font-weight: 700;
     color: var(--pink);
-    opacity: 0.3;
+    opacity: 0.15;
     position: absolute;
-    top: 20px;
+    top: 16px;
     right: 24px;
     line-height: 1;
+    pointer-events: none; /* Чтобы цифра не мешала выделять текст */
 }
 
 .rule-card h3 {
@@ -460,7 +462,7 @@ h3 {
     z-index: 2;
 }
 
-/* Мобильная версия для правил */
+/* Адаптив для телефонов */
 @media (max-width: 768px) {
     .rules-grid {
         display: flex !important;
@@ -473,7 +475,9 @@ h3 {
     }
     
     .rule-num {
-        font-size: 36px;
+        font-size: 48px;
+        top: 12px;
+        right: 16px;
     }
 }
 
