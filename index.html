@@ -63,7 +63,7 @@
                     <p>Использую интерактивные платформы и игры, понятные современному ребенку</p>
                 </div>
                 <div class="benefit-card">
-                    <img class="benefit-icon" src="icons/crown%20icon.svg" alt="crown">
+                    <img class="keep-icon" src="icons/crown%20icon.svg" alt="crown">
                     <h3>Работа на результат</h3>
                     <p>Подготовка к ВПР, контрольным и проверочным, а также улучшение оценок</p>
                 </div>
@@ -103,7 +103,7 @@
                         <p>Знакомлюсь с вашим ребенком, уточняю в каких знаниях есть пробелы и намечаю программу</p>
                     </div>
                     <div class="price-row">
-                        <div class="price-item"> <span>45 минут</span> <strong class="price-val">400₽</strong> </div>
+                        <div class="price-item"> <span>45 минут</span> <strong class="price-val">450₽</strong> </div>
                     </div>
                     <a href="https://t.me/millllank" class="btn btn-main btn-full">Записаться на пробный урок</a>
                 </div>
@@ -123,10 +123,13 @@
                         </div>
                     </div>
                     <div class="price-row">
-                        <div class="price-item"> <span>45 минут</span> <strong class="price-val">500₽</strong> </div>
+                        <div class="price-item"> <span>45 минут</span> <strong class="price-val">550₽</strong> </div>
                         <img class="price-sep" src="icons/price-sep.svg" alt="separator">
-                        <div class="price-item"> <span>60 минут</span> <strong class="price-val">550₽</strong> </div>
+                        <div class="price-item"> <span>60 минут</span> <strong class="price-val">600₽</strong> </div>
                     </div>
+                    <p style="text-align: center; margin-top: 16px; font-size: 14px; color: var(--text-main);">
+                        * уроки в выходные (суббота/воскресенье) — <strong>+100 рублей</strong> к базовой цене.
+                    </p>
                 </div>
             </div>
         </section>
@@ -173,49 +176,73 @@
             <h2 class="section-title">Отзывы родителей</h2>
             <p class="section-subtitle">Нажмите на отзыв, чтобы прочитать все подтвержденные отзывы на моем профиле
                 Avito.</p>
-            <div class="reviews-grid">
-                <a href="https://www.avito.ru/brands/9837527fad60e99bf5cc3aa227d4fd35" target="_blank"
-                    class="review-card">
-                    <div class="review-header">
-                        <div class="author-info">
-                            <div class="author-avatar"> <img src="photos/avatar1.png" alt="Аля"> </div>
-                            <div class="author-meta"> <strong>Аля</strong>
-                                <div class="stars">★★★★★</div>
-                            </div>
-                        </div> <span class="review-date">10.06.25</span>
-                    </div>
-                    <p class="review-text">«Милана очень доброжелательная и сразу нашла общий язык с ребёнком, занимался
-                        с удовольствием!»</p>
-                    <div class="review-footer">Мама ученика 4 класса</div>
-                </a>
-                <a href="https://www.avito.ru/brands/9837527fad60e99bf5cc3aa227d4fd35" target="_blank"
-                    class="review-card">
-                    <div class="review-header">
-                        <div class="author-info">
-                            <div class="author-avatar"> <img src="photos/avatar2.png" alt="Мария"> </div>
-                            <div class="author-meta"> <strong>Мария</strong>
-                                <div class="stars">★★★★★</div>
-                            </div>
-                        </div> <span class="review-date">07.01.25</span>
-                    </div>
-                    <p class="review-text">«Ребенок нашел общий язык, ему все нравится, занимается пол года,
-                        отказывается бросать.»</p>
-                    <div class="review-footer">Мама ученика 5 класса</div>
-                </a>
-                <a href="https://www.avito.ru/brands/9837527fad60e99bf5cc3aa227d4fd35" target="_blank"
-                    class="review-card">
-                    <div class="review-header">
-                        <div class="author-info">
-                            <div class="author-avatar"> <img src="photos/avatar3.png" alt="Кристина"> </div>
-                            <div class="author-meta"> <strong>Кристина</strong>
-                                <div class="stars">★★★★★</div>
-                            </div>
-                        </div> <span class="review-date">13.11.24</span>
-                    </div>
-                    <p class="review-text">«Замечательный педагог! Милана быстро нашла подход к ребёнку 5 лет,
-                        заинтересовала занятиями!»</p>
-                    <div class="review-footer">Мама 5-летней девочки</div>
-                </a>
+            
+            <div class="reviews-slider-wrapper">
+                <button class="slider-btn prev-btn" id="review-prev" aria-label="Предыдущие отзывы" disabled>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                </button>
+                
+                <div class="reviews-grid" id="reviews-container">
+                    <a href="https://www.avito.ru/brands/9837527fad60e99bf5cc3aa227d4fd35" target="_blank"
+                        class="review-card">
+                        <div class="review-header">
+                            <div class="author-info">
+                                <div class="author-avatar"> <img src="photos/avatar4.png" alt="Анна"> </div>
+                                <div class="author-meta"> <strong>Анна</strong>
+                                    <div class="stars">★★★★★</div>
+                                </div>
+                            </div> <span class="review-date">29.12.25</span>
+                        </div>
+                        <p class="review-text">«Занимаясь с Миланой у дочери появился интерес к предмету, улучшились оценки! Мы очень довольны компетентностью и уровнем, с которым преподает Милана. Рекомендую.»</p>
+                        <div class="review-footer">Мама 12-летней девочки</div>
+                    </a>
+                    <a href="https://www.avito.ru/brands/9837527fad60e99bf5cc3aa227d4fd35" target="_blank"
+                        class="review-card">
+                        <div class="review-header">
+                            <div class="author-info">
+                                <div class="author-avatar"> <img src="photos/avatar1.png" alt="Аля"> </div>
+                                <div class="author-meta"> <strong>Аля</strong>
+                                    <div class="stars">★★★★★</div>
+                                </div>
+                            </div> <span class="review-date">10.06.25</span>
+                        </div>
+                        <p class="review-text">«Милана очень доброжелательная и сразу нашла общий язык с ребёнком, занимался
+                            с удовольствием!»</p>
+                        <div class="review-footer">Мама ученика 4 класса</div>
+                    </a>
+                    <a href="https://www.avito.ru/brands/9837527fad60e99bf5cc3aa227d4fd35" target="_blank"
+                        class="review-card">
+                        <div class="review-header">
+                            <div class="author-info">
+                                <div class="author-avatar"> <img src="photos/avatar2.png" alt="Мария"> </div>
+                                <div class="author-meta"> <strong>Мария</strong>
+                                    <div class="stars">★★★★★</div>
+                                </div>
+                            </div> <span class="review-date">07.01.25</span>
+                        </div>
+                        <p class="review-text">«Ребенок нашел общий язык, ему все нравится, занимается пол года,
+                            отказывается бросать.»</p>
+                        <div class="review-footer">Мама ученика 5 класса</div>
+                    </a>
+                    <a href="https://www.avito.ru/brands/9837527fad60e99bf5cc3aa227d4fd35" target="_blank"
+                        class="review-card">
+                        <div class="review-header">
+                            <div class="author-info">
+                                <div class="author-avatar"> <img src="photos/avatar3.png" alt="Кристина"> </div>
+                                <div class="author-meta"> <strong>Кристина</strong>
+                                    <div class="stars">★★★★★</div>
+                                </div>
+                            </div> <span class="review-date">13.11.24</span>
+                        </div>
+                        <p class="review-text">«Замечательный педагог! Милана быстро нашла подход к ребёнку 5 лет,
+                            заинтересовала занятиями!»</p>
+                        <div class="review-footer">Мама 5-летней девочки</div>
+                    </a>
+                </div>
+
+                <button class="slider-btn next-btn" id="review-next" aria-label="Следующие отзывы">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
             </div>
         </section>
 
@@ -223,6 +250,9 @@
             <h2 class="section-title">Контакты</h2>
             <p class="section-subtitle">Напишите мне в удобный мессенджер. Я отвечу вам как можно скорее.</p>
             <div class="social-grid">
+                <a href="https://max.ru/u/" class="social-card">
+                    <img src="icons/max.png" alt="max"><span>Макс</span>
+                </a>
                 <a href="https://vk.com/araslanova_mr" class="social-card">
                     <img src="icons/vk.svg" alt="vk"><span>Вконтакте</span>
                 </a>
@@ -268,6 +298,49 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const container = document.getElementById('reviews-container');
+            const prevBtn = document.getElementById('review-prev');
+            const nextBtn = document.getElementById('review-next');
+
+            if (!container || !prevBtn || !nextBtn) return;
+
+            function updateButtons() {
+                const scrollLeft = container.scrollLeft;
+                const maxScroll = container.scrollWidth - container.clientWidth;
+                
+                // Кнопка назад неактивна, если мы в самом начале
+                prevBtn.disabled = scrollLeft <= 5;
+                // Кнопка вперед неактивна, если мы в самом конце
+                nextBtn.disabled = scrollLeft >= maxScroll - 5;
+            }
+
+            function getScrollStep() {
+                const firstCard = container.querySelector('.review-card');
+                if (!firstCard) return 0;
+                
+                // Высчитываем точную ширину карточки вместе с отступом gap (24px)
+                const cardWidth = firstCard.offsetWidth + 24; 
+                return cardWidth * 3; // Листаем ровно по 3 карточки
+            }
+
+            nextBtn.addEventListener('click', function () {
+                container.scrollBy({ left: getScrollStep(), behavior: 'smooth' });
+            });
+
+            prevBtn.addEventListener('click', function () {
+                container.scrollBy({ left: -getScrollStep(), behavior: 'smooth' });
+            });
+
+            container.addEventListener('scroll', updateButtons);
+            window.addEventListener('resize', updateButtons);
+            
+            // Первоначальная проверка при загрузке страницы
+            setTimeout(updateButtons, 200);
+        });
+    </script>
 </body>
 
 </html>
